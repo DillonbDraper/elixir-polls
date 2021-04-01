@@ -1,6 +1,8 @@
 defmodule ExPoll.Polls.Poll do
   use Ecto.Schema
   import Ecto.Changeset
+  alias ExPoll.Polls.Option
+
 
   schema "polls" do
     field :question, :string
