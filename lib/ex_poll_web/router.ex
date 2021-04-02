@@ -12,6 +12,9 @@ defmodule ExPollWeb.Router do
       resources "/options", OptionController, except: [:new, :edit]
       resources "/votes", VoteController, except: [:new, :edit]
     end
+
+    post("/polls/:id/vote", VoteController, :create)
+
   end
 
   # Enables LiveDashboard only for development
